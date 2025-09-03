@@ -26,7 +26,7 @@ export class AuthGuard implements CanActivate {
     | UrlTree {
     const score = Number(route.queryParamMap.get('score'));
 
-    if (score >= 0) {
+    if (score >= 30.0) {
       return true;
     } else {
       alert('El usuario tiene un score menor a 30, no puede acceder al perfil');
