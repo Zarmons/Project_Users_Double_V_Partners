@@ -1,0 +1,109 @@
+.back-btn {
+  margin-bottom: 1rem;
+  margin: 1rem 1rem;
+}
+
+.user-card {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 3px solid #4cd07d;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.top-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.avatar-section {
+  flex: 0 0 150px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #4cd07d;
+}
+
+.stats-section {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.stat {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.stat strong {
+  font-size: 1.2rem;
+  color: #1a3d2f;
+}
+
+.stat span,
+p {
+  font-size: 0.9rem;
+  color: #91c9a6;
+}
+
+.info-section {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.info-section h2 {
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+  color: #1a3d2f;
+}
+
+.info-section p {
+  margin: 0;
+  color: #91c9a6;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  gap: 12px;
+}
+
+::ng-deep .btn-green .p-button {
+  background-color: #a8d5ba;
+  border: none;
+  color: #1a3d2f;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+  margin: 2rem;
+  &:hover {
+    background-color: #91c9a6;
+  }
+}
+
+.icon {
+  font-size: 1.2rem;
+}
+
+.bio-icon,
+.location-icon {
+  color: #1a3d2f;
+}

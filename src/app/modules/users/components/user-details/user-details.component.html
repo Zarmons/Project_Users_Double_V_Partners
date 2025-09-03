@@ -1,0 +1,34 @@
+<p-button class="btn-green" (click)="return()" icon="fa-solid fa-left-long"></p-button>
+
+<div class="user-card" *ngIf="user">
+  <div class="top-section">
+    <div class="avatar-section">
+      <img [src]="user.avatar_url" alt="Avatar" class="avatar">
+    </div>
+    <div class="info-container">
+      <div class="info-section">
+        <h2>{{ user.login }}</h2>
+        <p>ID: {{ user.id }}</p>
+      </div>
+      <div class="stats-section">
+        <div class="stat"><strong>{{ user.followers }}</strong><span>Seguidores</span></div>
+        <div class="stat"><strong>{{ user.following }}</strong><span>Seguidos</span></div>
+        <div class="stat"><strong>{{ user.public_repos }}</strong><span>Repositorios</span></div>
+      </div>
+      <div class="stats-section">
+        <div class="stat">
+          <i class="fa-solid fa-book icon bio-icon"></i>
+          <strong>{{ user.bio }}</strong>
+        </div>
+      </div>
+
+      <div class="stats-section">
+        <div class="stat">
+          <i class="fa-solid fa-location-dot icon location-icon"></i>
+          <strong>{{ user.location }}</strong>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

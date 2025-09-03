@@ -1,0 +1,27 @@
+<app-alert #alert></app-alert>
+
+<div class="form-container">
+  <form [formGroup]="listUsersForm" class="form-inline">
+    <input type="text" pInputText formControlName="searchUsers" placeholder="Buscar usuario..." />
+    <p-button label="Buscar" class="btn-green"  (click)="search()"  icon="fa-solid fa-magnifying-glass" ></p-button>
+  </form>
+</div>
+
+<div *ngIf="!viewData" class="img-container">
+  <img src="../../../../../assets/svg/sin usuarios.svg" alt="Sin usuarios">
+</div>
+
+<div *ngIf="viewData" class="info-container">
+  <div class="users-container">
+    <div class="user-card" *ngFor="let user of dataUsers" [routerLink]="['/perfil', user.login]" [queryParams]="{ score: user.score }">
+      <img [src]="user.avatar_url" alt="{{user.login}}" />
+      <h2>{{ user.login }}</h2>
+      <p>ID: {{ user.id }}</p>
+    </div>
+  </div>
+
+
+  <div class="chart-card">
+    <p-chart type="bar" [data]="basicData" [options]="basicOptions"></p-chart>
+  </div>
+</div>
